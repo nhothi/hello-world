@@ -28,7 +28,9 @@ metadata:
   name: helloworld
 spec:
   type: LoadBalancer
-  ports:
-  - port: 8000
   selector:
     app: helloworld
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
